@@ -39,9 +39,11 @@ Technical controls to detect and scrub unsafe content before it is shown to the 
 | **7.3.1** | **Verify that** automated classifiers scan every response and block content that matches defined harmful content categories. | 1 |
 | **7.3.2** | **Verify that** output filters detect and block responses that disclose system prompt content. | 2 |
 | **7.3.3** | **Verify that** model-generated output is prevented from triggering automatic arbitrary outbound requests. | 2 |
-| **7.3.4** | **Verify that** model-generated outputs are scanned for encoding and representation smuggling artifacts before being returned to callers or downstream systems, and that detections trigger rejection or sanitization. | 3 |
-| **7.3.5** | **Verify that** explanations shown to the user are sanitized to remove system prompts or backend data. | 1 |
-| **7.3.6** | **Verify that** all generated media includes a watermark or cryptographic signature to prove it was AI-generated. | 3 |
+| **7.3.4** | **Verify that** model outputs are checked for hidden or obfuscated content created through encoding before being returned or passed to downstream systems. | 3 |
+| **7.3.5** | **Verify that** model outputs are checked for hidden or misleading content created through alternate representations, such as markup, formatting, metadata, or structured fields. | 3 |
+| **7.3.6** | **Verify that** any detected smuggling artifacts are blocked, sanitized, or safely handled before the output is returned or processed further. | 3 |
+| **7.3.7** | **Verify that** explanations shown to the user are sanitized to remove system prompts or backend data. | 1 |
+| **7.3.8** | **Verify that** all generated media includes a watermark or cryptographic signature to prove it was AI-generated. | 3 |
 
 ---
 
